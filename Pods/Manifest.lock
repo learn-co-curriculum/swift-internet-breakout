@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Charts (3.0.0):
+    - Charts/Core (= 3.0.0)
+  - Charts/Core (3.0.0)
+  - CorePlot (2.2)
+  - SnapKit (3.0.2)
+  - SwiftDate (4.0.6)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - CorePlot
+  - SnapKit
+  - SwiftDate
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Charts: beb341928d2135613b4325a6c6aff9f2f6de895e
+  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SwiftDate: 549729eaa54bd9f64fd80abfd12ddd3d44ff5098
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: a78afb2e4e812f9ef00533fd372e0269f160e984
+
+COCOAPODS: 1.0.1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44F52BD9126F96C9C6CBF2C8 /* Pods_niftyFlatironWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024FE9CC09B49CE8933276F6 /* Pods_niftyFlatironWeather.framework */; };
 		8F0772751DC2FDEF0061A640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0772741DC2FDEF0061A640 /* AppDelegate.swift */; };
 		8F0772771DC2FDEF0061A640 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0772761DC2FDEF0061A640 /* ViewController.swift */; };
 		8F07727A1DC2FDEF0061A640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0772781DC2FDEF0061A640 /* Main.storyboard */; };
@@ -16,9 +17,17 @@
 		8F0772891DC37E740061A640 /* ForecastApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0772881DC37E740061A640 /* ForecastApiClient.swift */; };
 		8F07728B1DC37E8F0061A640 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07728A1DC37E8F0061A640 /* Secrets.swift */; };
 		8F07728D1DC380710061A640 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07728C1DC380710061A640 /* Forecast.swift */; };
+		8FD1EBEA1DCEAA8600A8F39D /* BarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE31DCEAA8600A8F39D /* BarGraphView.swift */; };
+		8FD1EBEB1DCEAA8600A8F39D /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE41DCEAA8600A8F39D /* Graph.swift */; };
+		8FD1EBEC1DCEAA8600A8F39D /* GraphsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE51DCEAA8600A8F39D /* GraphsExtensions.swift */; };
+		8FD1EBED1DCEAA8600A8F39D /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE61DCEAA8600A8F39D /* GraphView.swift */; };
+		8FD1EBEE1DCEAA8600A8F39D /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE71DCEAA8600A8F39D /* LineGraphView.swift */; };
+		8FD1EBEF1DCEAA8600A8F39D /* MultiBarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE81DCEAA8600A8F39D /* MultiBarGraphView.swift */; };
+		8FD1EBF01DCEAA8600A8F39D /* PieGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1EBE91DCEAA8600A8F39D /* PieGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		024FE9CC09B49CE8933276F6 /* Pods_niftyFlatironWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_niftyFlatironWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0772711DC2FDEF0061A640 /* niftyFlatironWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = niftyFlatironWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0772741DC2FDEF0061A640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F0772761DC2FDEF0061A640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +39,16 @@
 		8F0772881DC37E740061A640 /* ForecastApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastApiClient.swift; sourceTree = "<group>"; };
 		8F07728A1DC37E8F0061A640 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		8F07728C1DC380710061A640 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		8F96C63E1DC7D4DA00B5AAD2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8FD1EBE31DCEAA8600A8F39D /* BarGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraphView.swift; sourceTree = "<group>"; };
+		8FD1EBE41DCEAA8600A8F39D /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		8FD1EBE51DCEAA8600A8F39D /* GraphsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphsExtensions.swift; sourceTree = "<group>"; };
+		8FD1EBE61DCEAA8600A8F39D /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		8FD1EBE71DCEAA8600A8F39D /* LineGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		8FD1EBE81DCEAA8600A8F39D /* MultiBarGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiBarGraphView.swift; sourceTree = "<group>"; };
+		8FD1EBE91DCEAA8600A8F39D /* PieGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieGraphView.swift; sourceTree = "<group>"; };
+		9040AC580BE4E2AE9903A9FB /* Pods-niftyFlatironWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-niftyFlatironWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-niftyFlatironWeather/Pods-niftyFlatironWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		FB00348C8A59DC639A036653 /* Pods-niftyFlatironWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-niftyFlatironWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-niftyFlatironWeather/Pods-niftyFlatironWeather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +56,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F52BD9126F96C9C6CBF2C8 /* Pods_niftyFlatironWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F80F250C090499E19D36A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F96C63E1DC7D4DA00B5AAD2 /* AVFoundation.framework */,
+				024FE9CC09B49CE8933276F6 /* Pods_niftyFlatironWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F0772681DC2FDEF0061A640 = {
 			isa = PBXGroup;
 			children = (
 				8F0772731DC2FDEF0061A640 /* niftyFlatironWeather */,
 				8F0772721DC2FDEF0061A640 /* Products */,
+				A8C02FE77431F19DD9E6DED6 /* Pods */,
+				1F80F250C090499E19D36A69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +93,7 @@
 		8F0772731DC2FDEF0061A640 /* niftyFlatironWeather */ = {
 			isa = PBXGroup;
 			children = (
+				8FD1EBF11DCEAAA500A8F39D /* Graph */,
 				8F0772741DC2FDEF0061A640 /* AppDelegate.swift */,
 				8F0772761DC2FDEF0061A640 /* ViewController.swift */,
 				8F0772861DC37DDD0061A640 /* DataStore.swift */,
@@ -76,6 +108,29 @@
 			path = niftyFlatironWeather;
 			sourceTree = "<group>";
 		};
+		8FD1EBF11DCEAAA500A8F39D /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				8FD1EBE31DCEAA8600A8F39D /* BarGraphView.swift */,
+				8FD1EBE41DCEAA8600A8F39D /* Graph.swift */,
+				8FD1EBE51DCEAA8600A8F39D /* GraphsExtensions.swift */,
+				8FD1EBE61DCEAA8600A8F39D /* GraphView.swift */,
+				8FD1EBE71DCEAA8600A8F39D /* LineGraphView.swift */,
+				8FD1EBE81DCEAA8600A8F39D /* MultiBarGraphView.swift */,
+				8FD1EBE91DCEAA8600A8F39D /* PieGraphView.swift */,
+			);
+			name = Graph;
+			sourceTree = "<group>";
+		};
+		A8C02FE77431F19DD9E6DED6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9040AC580BE4E2AE9903A9FB /* Pods-niftyFlatironWeather.debug.xcconfig */,
+				FB00348C8A59DC639A036653 /* Pods-niftyFlatironWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F0772831DC2FDEF0061A640 /* Build configuration list for PBXNativeTarget "niftyFlatironWeather" */;
 			buildPhases = (
+				0B5C4360476AE36D4221847C /* [CP] Check Pods Manifest.lock */,
 				8F07726D1DC2FDEF0061A640 /* Sources */,
 				8F07726E1DC2FDEF0061A640 /* Frameworks */,
 				8F07726F1DC2FDEF0061A640 /* Resources */,
+				3C73576504F9A4665FE2A705 /* [CP] Embed Pods Frameworks */,
+				3E409144C82D3E105B216648 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,16 +202,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B5C4360476AE36D4221847C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3C73576504F9A4665FE2A705 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-niftyFlatironWeather/Pods-niftyFlatironWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E409144C82D3E105B216648 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-niftyFlatironWeather/Pods-niftyFlatironWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F07726D1DC2FDEF0061A640 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD1EBEB1DCEAA8600A8F39D /* Graph.swift in Sources */,
+				8FD1EBEE1DCEAA8600A8F39D /* LineGraphView.swift in Sources */,
 				8F0772771DC2FDEF0061A640 /* ViewController.swift in Sources */,
+				8FD1EBEF1DCEAA8600A8F39D /* MultiBarGraphView.swift in Sources */,
 				8F07728B1DC37E8F0061A640 /* Secrets.swift in Sources */,
+				8FD1EBF01DCEAA8600A8F39D /* PieGraphView.swift in Sources */,
+				8FD1EBEA1DCEAA8600A8F39D /* BarGraphView.swift in Sources */,
 				8F0772871DC37DDD0061A640 /* DataStore.swift in Sources */,
+				8FD1EBED1DCEAA8600A8F39D /* GraphView.swift in Sources */,
 				8F0772891DC37E740061A640 /* ForecastApiClient.swift in Sources */,
 				8F07728D1DC380710061A640 /* Forecast.swift in Sources */,
+				8FD1EBEC1DCEAA8600A8F39D /* GraphsExtensions.swift in Sources */,
 				8F0772751DC2FDEF0061A640 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +388,7 @@
 		};
 		8F0772841DC2FDEF0061A640 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9040AC580BE4E2AE9903A9FB /* Pods-niftyFlatironWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WNAGBXF4G9;
@@ -288,6 +402,7 @@
 		};
 		8F0772851DC2FDEF0061A640 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB00348C8A59DC639A036653 /* Pods-niftyFlatironWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WNAGBXF4G9;
@@ -318,6 +433,7 @@
 				8F0772851DC2FDEF0061A640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

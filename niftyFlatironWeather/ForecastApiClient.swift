@@ -7,75 +7,95 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class ForecastApiClient{
     
     
     
-    class func getWeatherForecast(for period:ForecastType, latitude:String, longitude:String, completion:@escaping ([Forecast]) -> ()){
-        var forecasts = [Forecast]()
-        getWeather(latitude: latitude, longitude: longitude) { (forecastDict) in
-            let periodString = "\(period)"
-            print(periodString)
-            
-            let periodDict = forecastDict[periodString] as! [String:Any]
-            let dataArray = periodDict["data"] as! [[String:Any]]
-            
-            for dataItem in dataArray {
-                var forecast = Forecast(dict: dataItem)
-                forecasts.append(forecast)
+    
+    
+    
+    class func getWeather(location:(latitude: Double, longitude: Double), completion:@escaping (Forecast)->()){
+        let url = "\(Secrets.apiUrl)\(Secrets.apiKey)/\(location.latitude),\(location.longitude)"
+        Alamofire.request(url).responseJSON { (response) in
+            if let data = response.data{
+                let json = JSON(data: data)
+                let forecast = Forecast(dict: json)
+                //print(forecast.currently.apparentTemperature)
+                completion(forecast)
             }
-            completion(forecasts)
         }
-        
-        
     }
     
-    
-    class func getCurrentWeather(latitude:String, longitude:String, completion:@escaping (Forecast)->()){
-        getWeather(latitude: latitude, longitude: longitude) { (forecastDict) in
-            
-            let data = forecastDict["currently"] as! [String:Any]
-            var forecast = Forecast(dict: data)
-            completion(forecast)
-            
+    class func getWeather(at date:String, location:(latitude: Double, longitude: Double), completion:@escaping (Forecast)->()){
+        let url = "\(Secrets.apiUrl)\(Secrets.apiKey)/\(location.latitude),\(location.longitude),\(date)"
+        Alamofire.request(url).responseJSON { (response) in
+            if let data = response.data{
+                let json = JSON(data: data)
+                let forecast = Forecast(dict: json)
+                //print(forecast.currently.apparentTemperature)
+                completion(forecast)
+            }
         }
-
-        
-        
-        
-        
     }
     
     
     
-    private class func getWeather(latitude:String,longitude:String,completion:@escaping ([String:Any])->()){
-        let urlString = "\(Secrets.apiUrl)\(Secrets.apiKey)/\(latitude),\(longitude)"
+    
+    
+    
+    
+    
+    /*
+    class func getWeatherFromAPI(for timePeriod:ForecastType, completion:@escaping ([Forecast])->()){
         
-        let url = URL(string: urlString)
-
+        var forecastsArray = [Forecast]()
         
-        guard let unwrappedUrl = url else { return }
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: unwrappedUrl) { (data, response, error) in
+        let url = "\(Secrets.apiUrl)\(Secrets.apiKey)"
+        Alamofire.request(url).responseJSON { response in
+            // parse json in some way
             
-            guard let unwrappeddata = data else { return }
-            do {
-               var responseJson = try JSONSerialization.jsonObject(with: unwrappeddata, options: []) as! [String:Any]
-                completion(responseJson)
+            if let data = response.data{
+                var json = JSON(data: data)
+                var periodJson = json["\(timePeriod)"]
                 
-            }catch{
-                
+                switch timePeriod{
+                case .currently:
+                    var currentlyForecast = Forecast(dict: periodJson)
+                    forecastsArray.append(currentlyForecast)
+                    break
+                case .hourly:
+                    var hourlyJsonArray = periodJson["data"].arrayValue
+                    for hourly in hourlyJsonArray{
+                        var forecast = Forecast(dict: hourly)
+                        forecastsArray.append(forecast)
+                    }
+                    break
+                case .daily:
+                    var dailyJsonArray = periodJson["data"].arrayValue
+                    for daily in dailyJsonArray{
+                        var forecast = Forecast(dict: daily)
+                        forecastsArray.append(forecast)
+                    }
+                    break
+                }
+
             }
             
+           
+            completion(forecastsArray)
             
             
+           
             
-          
         }
-        task.resume()
+        
     }
+    */
+
+
     
     
 }
